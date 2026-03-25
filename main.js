@@ -67,3 +67,13 @@ for (let i = 1; i <= 100; i++) {
 
 const reverse = str => str.split("").reverse().join("");
 const unique = arr => [...new Set(arr)];
+function isPalindrome(str) {
+  // Step 1: clean the string
+  const cleaned = str.toLowerCase().replace(/\s/g, "");
+
+  // Step 2: reverse it
+  const reversed = cleaned.split("").reverse().join("");
+
+  // Step 3: compare
+  return cleaned === reversed;
+}
